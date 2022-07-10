@@ -4,10 +4,14 @@ import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import UsersPage from "./pages/UsersPage";
 import NotFoundPage from "./pages/NotFoundPage";
+import Navbar from "./components/Navbar";
 
 export default function App () {
     return (
         <BrowserRouter>
+
+            <Navbar></Navbar>
+
             <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/users" element={<UsersPage />} />

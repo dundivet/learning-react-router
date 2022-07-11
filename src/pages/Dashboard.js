@@ -1,4 +1,4 @@
-import {useNavigate, Route, Routes, Link} from 'react-router-dom';
+import {useNavigate, Outlet, Link} from 'react-router-dom';
 
 export default function Dashboard() {
     const navigate = useNavigate();
@@ -15,12 +15,10 @@ export default function Dashboard() {
             Logout
         </button>
 
-        <Link to={`/dashboard/welcome`}>Say welcome</Link>
+        <Link to={`welcome`}>Say welcome</Link>
+        <Link to={`goodbye`}>Say goodbye</Link>
 
-        <Routes>
-            <Route path='welcome' element={<p> Welcome!!!</p>} />
-        </Routes>
-
+        <Outlet/>
     </div>
   )
 }

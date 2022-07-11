@@ -6,18 +6,17 @@ import UsersPage from "./pages/UsersPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import Navbar from "./components/Navbar";
 
-export default function App () {
-    return (
-        <BrowserRouter>
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Navbar></Navbar>
 
-            <Navbar></Navbar>
-
-            <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/users" element={<UsersPage />} />
-                <Route path="/about" element={<AboutPage />} />
-                <Route path="*" element={<NotFoundPage />} />
-            </Routes>
-        </BrowserRouter>
-    );
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/users" element={<UsersPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
